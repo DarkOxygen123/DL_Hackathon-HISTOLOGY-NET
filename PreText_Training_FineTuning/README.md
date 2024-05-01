@@ -10,11 +10,11 @@ This directory contains the code for training and fine-tuning a model using the 
 
 ## Files
 
-- **PreText_training_colourize.py**: This Python script contains the code for the colorization pretext task.
+- `PreText_training_colourize.py`: This Python script contains the code for the colorization pretext task.
 
-- **PreText_training_PatchMasking.py**: This Python script contains the code for the Patch MAsking pretext task.
+- `PreText_training_PatchMasking.py`: This Python script contains the code for the Patch MAsking pretext task.
 
-- **finetune_PreText_Model.py**: This Python script contains the code for fine-tuning the model on the downstream task. It includes the definition of the *SegmentationModel class* for representing a segmentation model using the Checkpoint weights from PreText task, and the *Trainer class* for training the model.
+- `finetune_PreText_Model.py`: This Python script contains the code for fine-tuning the model on the downstream task. It includes the definition of the **SegmentationModel** class for representing a segmentation model using the Checkpoint weights from PreText task, and the **Trainer** class for training the model.
 
 ## Requirements
 Requires the following libraries:
