@@ -184,6 +184,29 @@ class SegmentationDataset(torch.utils.data.Dataset):
 
 
 class Trainer:
+    '''
+    Attributes
+    ----------
+    model : torch.nn.Module
+        The PyTorch model to train.
+    train_dataloader : torch.utils.data.DataLoader
+        The DataLoader for the training data.
+    val_dataloader : torch.utils.data.DataLoader
+        The DataLoader for the validation data.
+    criterion : torch.nn.Module
+        The loss function.
+    optimizer : torch.optim.Optimizer
+        The optimizer.
+    num_epochs : int
+        The number of epochs to train the model.
+
+    Methods
+    -------
+    train():
+        Trains the model for a specified number of epochs, 
+        and validates it at the end of each epoch.
+    '''
+
     def __init__(self, model, train_dataloader, val_dataloader, criterion, optimizer, num_epochs):
         self.model = model
         self.train_dataloader = train_dataloader
@@ -193,6 +216,17 @@ class Trainer:
         self.num_epochs = num_epochs
 
     def train(self):
+        """
+        Trains the model for a specified number of epochs,
+        and validates it at the end of each epoch.
+
+        For each epoch, the function iterates over the training DataLoader,
+        performs forward and backward passes, and updates the model parameters.
+
+        After each epoch, the function evaluates the model on the validation DataLoader.
+
+        The function also saves the model after each epoch.
+        """
         for epoch in range(self.num_epochs):
             self.model.train()
             train_loss = 0
