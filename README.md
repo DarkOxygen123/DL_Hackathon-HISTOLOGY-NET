@@ -39,7 +39,7 @@ streamlit run streamlit_app.py
 
 ## Model and Webapp showcase 
 Find our YouTube explaination of the model with given PS and demonstration of Webapp for the application
-in [this link](https://youtu.be/UP_F5P1BKEc)
+in [this link](https://youtu.be/UP_F5P1BKEc) and github page at [link](https://github.com/DarkOxygen123/DL_Hackathon-HISTOLOGY-NET/tree/main)
 
 ## Contributors
 This project was made possible by the hard work and dedication of
