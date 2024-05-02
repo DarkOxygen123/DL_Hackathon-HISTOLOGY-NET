@@ -20,6 +20,23 @@ Our current best model is the Ensemble model attached to the sequential model, w
 *   Dice score: **0.8388**
 *   Jaccard score: **0.7239**
 
+## WEB-APP
+This is the code for the web-application interface to our model, which allows user to input histology images, edit (if needed, crop/rotate) them and visualize/download their segmented masks.
+The application is hosted with Streamlit, and can be accesssed with [this link](https://histonet.streamlit.app/).
+
+### Running the application locally
+
+Install the Python libraries mentioned in `requirements.txt` of the WebApp folder. In addition, the application requires `streamlit`, `io`, `PIL`, `copy`and `numpy` libraries. 
+
+Paste the model checkpoint (.pth file) inside the model folder. The checkpoint file can be obtained by training the segmentation model, as per the instructions in our project's README. 
+(Due to limitation on size of submission allowed, it was not feasible to have a pre-existing .pth file saved.)
+
+To get the application running, add the directory where streamlit is installed to your system's path variabes and run the following command inside the project directory:
+
+```
+streamlit run streamlit_app.py
+```
+
 ## Contributors
 This project was made possible by the hard work and dedication of
 
